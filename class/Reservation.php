@@ -37,6 +37,7 @@ class Reservation {
         $this->_client = $client;
         $this->_dateArrive = new DateTime($dateArrive);
         $this->_dateDepart = new DateTime($dateDepart);
+        $chambre->setDisponibilite(false);
         $chambre->addReservation($this);
         $client->addReservation($this);
     }
