@@ -29,7 +29,7 @@ class Hotel {
     }
 
     public function getNom() {
-        return $this->$_nom;
+        return $this->_nom;
     }
     public function getAdresse() {
         return $this->_adresse;
