@@ -49,6 +49,7 @@ function afficherChambreHTML($hotel) {
     <style>
     table {
         border-collapse: collapse;
+        font-family: Arial;
     }
     td {
         padding: 15px;
