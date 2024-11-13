@@ -82,15 +82,17 @@ class Hotel {
     }
 
     public function afficherReservationHotel() {
-        $result = "Réservation de l'hôtel ".$this->_nom." ".$this->_ville."<br>";
-        // $result .= count($this->_listeChambres->getReservations())."RÉSERVATIONS<br>";
+        $i = 0;
+        $result = "";
         foreach ($this->_listeChambres as $reservation) {
+            $i += 1;
             foreach($reservation->getReservations() as $content) {
-                $result .= $content->_client->getPrenom()." ".$content->_client->getNom()." - Chambre ".$content->_chambre->getNchambre();
+                $result .= $content->getClient()->getPrenom()." ".$content->getClient()->getNom()." - Chambre ".$content->getChambre()->getNchambre();
                 $result .= " - du ".$content->getDateArrive()." au ".$content->getDateDepart()."<br>";
             }
         }
-        return $result;
+        $result1 = "Réservation de l'hôtel ".$this->_nom." ".$this->_ville."<br>".$i." RESERVATIONS<br>".$result;
+        return $result1;
     }
 
     public function __toString() {

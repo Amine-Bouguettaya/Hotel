@@ -32,7 +32,7 @@ class Chambre {
     }
 
     public function getNchambre() {
-        return $this->_nchambre;
+        return $this->_numeroChambre;
     }
     public function getPrix() {
         return $this->_prix;

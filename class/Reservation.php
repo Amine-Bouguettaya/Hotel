@@ -7,17 +7,29 @@ class Reservation {
     private DateTime $_dateDepart;
 
     public function setDateArrive($date) {
-        $_dateArrive->$date = $date;
+        $_dateArrive = new DateTime($date);
     }
     public function setDateDepart($date) {
-        $_dateDepart->$date = $date;
+        $_dateDepart = new DateTime($date);
+    }
+    public function setChambre($chambre) {
+        $_chambre = $chambre;
+    }
+    public function setClient($client) {
+        $_client = $client;
     }
 
     public function getDateArrive() {
-        return $_dateArrive->$date->format("d-m-Y");
+        return $this->_dateArrive->format("d-m-Y");
     }
     public function getDateDepart() {
-        return $_dateDepart->$date->format("d-m-Y");
+        return $this->_dateDepart->format("d-m-Y");
+    }
+    public function getChambre() {
+        return $this->_chambre;
+    }
+    public function getClient() {
+        return $this->_client;
     }
 
     public function __construct($chambre, $client, $dateArrive, $dateDepart) {
