@@ -82,7 +82,7 @@ class Hotel {
     }
 
     public function afficherReservationHotel() {
-        $i = 0;
+        $i = -1;
         $result = "";
         foreach ($this->_listeChambres as $reservation) {
             $i += 1;
